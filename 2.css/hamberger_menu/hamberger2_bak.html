@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            list-style: none;
+            transition: color 0.5s ease;
+        }
+        a:hover{
+            color: green;
+        }
+        .wrap{
+            display: block;
+            position: relative;
+            top: 50px; 
+            left: 50px;
+            user-select: none;
+            z-index: 1;
+        }
+        input{
+            display: block;
+            width: 40px;
+            height: 33px;
+            position: absolute;
+            top: -7px;
+            left: -7px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 3;
+        }
+        span{
+            display: block;
+            position: relative;
+            width: 33px;
+            height: 4px;
+            background-color: #cdcdcd;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            z-index: 2;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s ease-in-out,
+                        background 0.5s ease-in-out,
+                        opacity 0.55s ease;
+        }
+        .wrap span:first-child{
+            transform-origin: 0% 0%;
+        }
+        .wrap span:nth-last-child(2){
+            transform-origin: 0% 100%;
+        }
+
+        input:checked ~ span{
+            transform: rotate(45deg) translate(-2px, -1px);
+            opacity: 1;
+            background-color: black;
+        }
+        input:checked ~ span:nth-of-type(2){
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        input:checked ~ span:nth-of-type(3){
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        ul{
+            position: absolute;
+            width: 300px;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: 125px;
+            background: #ededed;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+
+        ul li{
+            padding: 10px 0;
+            font-size: 22px;
+        }
+
+        .wrap input:checked ~ ul{
+            transform: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="wrap">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul>
+                <a href="#"><li>about</li></a>
+                <a href="#"><li>home</li></a>
+                <a href="#"><li>content</li></a>
+                <a href="#"><li>more here</li></a>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

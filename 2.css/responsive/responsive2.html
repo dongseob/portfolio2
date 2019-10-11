@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/bd4f59ecf9.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: #d34c65;
+            text-align: center;
+        }
+
+        div{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+/* Icons */
+
+        a{
+            color: #fff;
+            background: #DB6E82;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            font-family: fontawesome;
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 28px;
+            padding-top: 12px;
+            margin: 0 2px;
+            transition: all .5s;
+        }
+
+        a:hover{
+            background: #ef92a3;
+        }
+
+/* pop-up text */
+
+        a span{
+            color: #666;
+            position: absolute;
+            font-family: sans-serif;
+            bottom: 0;
+            left: -25px;
+            right: -25px;
+            padding: 5px 7px;
+            z-index: -1;
+            font-size: 14px;
+            border-radius: 2px;
+            background: #fff;
+            opacity: 0;
+            transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+/* pop-up text arrow */
+
+        a span:before{
+            content: '';
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #fff;
+            position: absolute;
+            bottom: -5px;
+            left: 40px;
+        }
+
+/* text pops up when icon is in hover state */
+
+        a:hover span{
+            bottom: 50px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+/* font awesome icons */
+
+        a:nth-of-type(1):before{
+            content:'\f09a';
+        }
+        a:nth-of-type(2):before{
+            content:'\f099';
+        }
+        a:nth-of-type(3):before{
+            content:'\f0d5';
+        }
+        a:nth-of-type(4):before{
+            content:'\f113';
+        }
+        a:nth-of-type(5):before{
+            content:'\f17d';
+        }
+        a:nth-of-type(6):before{
+            content:'\f1cb';
+        }
+
+        body p{
+            position:absolute;
+            top:80%; 
+            left:50%;
+            transform: translate(-50%, -50%);
+            color: #ddd;
+        }
+
+
+        @media all and (min-width:700px) and (max-width:1000px){
+            a:nth-of-type(1):before{
+                content:'\f001';
+            }
+            a:nth-of-type(2):before{
+                content:'\f002';
+            }
+            a:nth-of-type(3):before{
+                content:'\f003';
+            }
+            a:nth-of-type(4):before{
+                content:'\f004';
+            }
+            a:nth-of-type(5):before{
+                content:'\f005';
+            }
+            a:nth-of-type(6):before{
+                content:'\f007';
+            }
+
+
+            a > span{font-size: 0px;}
+            .text1:after{
+                display: block;
+                content:"music";
+                font-size: 14px;
+            }
+            .text2:after{
+                display: block;
+                content:"search";
+                font-size: 14px;
+            }
+            .text3:after{
+                display: block;
+                content:"message";
+                font-size: 14px;
+            }
+            .text4:after{
+                display: block;
+                content:"heart";
+                font-size: 14px;
+            }
+            .text5:after{
+                display: block;
+                content:"star";
+                font-size: 14px;
+            }
+            .text6:after{
+                display: block;
+                content:"user";
+                font-size: 14px;
+            }
+            
+
+        }
+
+        @media all and (max-width:700px){
+            a{
+                display: block;
+                margin-top: 1rem;
+            }
+            a span{z-index: 9999;}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#"><span class="text1">Facebook</span></a>
+        <a href="#"><span class="text2">Twitter</span></a>
+        <a href="#"><span class="text3">Google+</span></a>
+        <a href="#"><span class="text4">Github</span></a>
+        <a href="#"><span class="text5">Dribbble</span></a>
+        <a href="#"><span class="text6">CodePen</span></a>
+    </div>
+
+    <p>← Drag window (in editor or full page view) to see the effect. →</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@import "compass/css3";
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,600); *,*::before, *::after { box-sizing: border-box; } body { margin: 2rem 0.5rem; background-color: #c4c8cc; color: #404448; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4; } h1 { margin: 0 0 2rem; font-weight: 400; line-height: 1.1; text-align: center; } p { margin: 0 0 1.4em; } ul { margin: 0 0 1.4em; padding: 0; padding-left: 1.15em; list-style-type: square; }
+
+
+@mixin card-stack( $card-color: white, $shadow-color: black ) {
+	box-shadow: 0 0.0625em 0.1875em 0 rgba( $shadow-color, 0.1 ),
+	            0 0.5em 0 -0.25em shade( $card-color, 5% ),
+	            0 0.5em 0.1875em -0.25em rgba( $shadow-color, 0.1 ),
+	            0 1em 0 -0.5em shade( $card-color, 10% ),
+	            0 1em 0.1875em -0.5em rgba( $shadow-color, 0.1 );
+}
+
+
+.card {
+	margin: 0 auto 2rem;
+	padding: 1rem;
+	min-width: 10rem;
+	max-width: 20rem;
+	
+	background-color: white;
+	
+	word-wrap: break-word;
+	
+	@include card-stack();
+	
+	&.card-primary,
+	&.card-dark {
+		color: white;
+	}
+	
+	&.card-primary {
+		background-color: tomato;
+		
+		text-shadow: 0 0.0625em 0 rgba( black, .25 );
+		
+		@include card-stack( tomato );
+	}
+	
+	&.card-secondary {
+		background-color: complement( tomato );
+		
+		@include card-stack( complement( tomato ) );
+	}
+	
+	&.card-dark {
+		background-color: #404040;
+		
+		@include card-stack( #404040 );
+	}
+	
+	> :last-child { margin-bottom: 0; }
+}

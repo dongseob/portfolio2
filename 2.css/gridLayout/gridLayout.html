@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .keyboard-base {
+                max-width: 1085px;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgb(197, 197, 197);
+                border-radius: 10px;
+                box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
+                display: grid;
+                grid-template-columns: repeat(30, 30px);
+                grid-template-rows: repeat(5, 60px);
+                grid-gap: 5px;
+            }
+
+            .key {
+                background-color: rgb(243, 243, 243);
+                border: 1.2px solid black;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+                grid-column: span 2;
+                font-size: 18px;
+                text-align: center;
+                padding-top: 18px;
+            }
+
+            .key:hover {
+            border: 1px solid #eeeeee;
+            }
+
+            .key:active {
+            border: 1px solid #eeeeee;
+            margin: 3%;
+            }
+            .space:active{
+                margin: 3px;
+            }
+            
+            .delete {
+                grid-column: span 4;
+            }
+
+            .tab {
+                grid-column: span 3;
+            }
+
+            .backslash {
+                grid-column: span 3;
+            }
+
+            .capslock {
+                grid-column: span 4;
+            }
+
+            .return {
+                grid-column: span 4;
+            }
+
+            .leftshift {
+                grid-column: span 5;
+            }
+
+            .rightshift {
+                grid-column: span 5;
+            }
+
+            .leftctrl {
+                grid-column: span 3;
+            }
+
+            .command {
+                grid-column: span 3;
+                font-size: 14px;
+            }
+
+            .space {
+                grid-column: span 13;
+            }
+    </style>
+</head>
+<body>
+    <div class="keyboard-base">
+        <div id="~" class="key" onclick="ButtonLog(id)">~</div>
+        <div id="1" class="key" onclick="ButtonLog(id)">1</div>
+        <div id="2" class="key" onclick="ButtonLog(id)">2</div>
+        <div id="3" class="key" onclick="ButtonLog(id)">3</div>
+        <div id="4" class="key" onclick="ButtonLog(id)">4</div>
+        <div id="5" class="key" onclick="ButtonLog(id)">5</div>
+        <div id="6" class="key" onclick="ButtonLog(id)">6</div>
+        <div id="7" class="key" onclick="ButtonLog(id)">7</div>
+        <div id="8" class="key" onclick="ButtonLog(id)">8</div>
+        <div id="9" class="key" onclick="ButtonLog(id)">9</div>
+        <div id="0" class="key" onclick="ButtonLog(id)">0</div>
+        <div id="-" class="key" onclick="ButtonLog(id)">-</div>
+        <div id="+" class="key" onclick="ButtonLog(id)">+</div>
+        <div id="Delete" class="key delete" onclick="ButtonLog(id)">Delete</div>
+        <div id="Tab" class="key tab" onclick="ButtonLog(id)">Tab</div>
+        <div id="Q" class="key" onclick="ButtonLog(id)">Q</div>
+        <div id="W" class="key" onclick="ButtonLog(id)">W</div>
+        <div id="E" class="key" onclick="ButtonLog(id)">E</div>
+        <div id="R" class="key" onclick="ButtonLog(id)">R</div>
+        <div id="T" class="key" onclick="ButtonLog(id)">T</div>
+        <div id="Y" class="key" onclick="ButtonLog(id)">Y</div>
+        <div id="U" class="key" onclick="ButtonLog(id)">U</div>
+        <div id="I" class="key" onclick="ButtonLog(id)">I</div>
+        <div id="O" class="key" onclick="ButtonLog(id)">O</div>
+        <div id="P" class="key" onclick="ButtonLog(id)">P</div>
+        <div id="[" class="key" onclick="ButtonLog(id)">[</div>
+        <div id="]" class="key" onclick="ButtonLog(id)">]</div>
+        <div id="\" class="key backslash" onclick="ButtonLog(id)">\</div>
+        <div id="CapsLock" class="key capslock" onclick="ButtonLog(id)">CapsLock</div>
+        <div id="A" class="key" onclick="ButtonLog(id)">A</div>
+        <div id="S" class="key" onclick="ButtonLog(id)">S</div>
+        <div id="D" class="key" onclick="ButtonLog(id)">D</div>
+        <div id="F" class="key" onclick="ButtonLog(id)">F</div>
+        <div id="G" class="key" onclick="ButtonLog(id)">G</div>
+        <div id="H" class="key" onclick="ButtonLog(id)">H</div>
+        <div id="J" class="key" onclick="ButtonLog(id)">J</div>
+        <div id="K" class="key" onclick="ButtonLog(id)">K</div>
+        <div id="L" class="key" onclick="ButtonLog(id)">L</div>
+        <div id=";" class="key" onclick="ButtonLog(id)">;</div>
+        <div id="'" class="key" onclick="ButtonLog(id)">'</div>
+        <div id="Return" class="key return" onclick="ButtonLog(id)">Return</div>
+        <div id="Shift" class="key leftshift" onclick="ButtonLog(id)">Shift</div>
+        <div id="Z" class="key" onclick="ButtonLog(id)">Z</div>
+        <div id="X" class="key" onclick="ButtonLog(id)">X</div>
+        <div id="C" class="key" onclick="ButtonLog(id)">C</div>
+        <div id="V" class="key" onclick="ButtonLog(id)">V</div>
+        <div id="B" class="key" onclick="ButtonLog(id)">B</div>
+        <div id="N" class="key" onclick="ButtonLog(id)">N</div>
+        <div id="M" class="key" onclick="ButtonLog(id)">M</div>
+        <div id="," class="key" onclick="ButtonLog(id)">,</div>
+        <div id="." class="key" onclick="ButtonLog(id)">.</div>
+        <div id="/" class="key" onclick="ButtonLog(id)">/</div>
+        <div id="Shift" class="key rightshift" onclick="ButtonLog(id)">Shift</div>
+        <div id="Ctrl" class="key leftctrl" onclick="ButtonLog(id)">Ctrl</div>
+        <div id="Alt" class="key" onclick="ButtonLog(id)">Alt</div>
+        <div id="Command" class="key command" onclick="ButtonLog(id)">Command</div>
+        <div id="Space" class="key space" onclick="ButtonLog(id)"></div>
+        <div id="Command" class="key command" onclick="ButtonLog(id)">Command</div>
+        <div id="Alt" class="key" onclick="ButtonLog(id)">Alt</div>
+        <div id="Ctrl" class="key" onclick="ButtonLog(id)">Ctrl</div>
+        <div id="Fn" class="key" onclick="ButtonLog(id)">Fn</div>
+    </div>
+    <script>
+        function ButtonLog(id){
+            var keyName = id;
+            console.log(keyName + " Pressed.");
+        }
+    </script>
+</body>
+</html>
