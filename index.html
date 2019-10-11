@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content="안녕하세요 정동섭의 포트폴리오 페이지입니다.">
+    <meta property="og:title" content="DongSeob - portfolio">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/ogimage.png">
-    <meta property="og:description" content="프론트엔드 퍼블리싱을 하는 정동섭입니다.">
-    <title>Document</title>
+    <meta property="og:description" content="Front-End and Publishing portfolio">
+    <title>DongSeob - portfolio</title>
+
+    <!-- erik meyer's "reset css" -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/csshake-slow.css">
+    <script src="/JQuery-3.4.0/jquery-3.4.0.js"></script>
+
     <style>
         /* all */
         body{
@@ -22,24 +28,51 @@
             color: #4A4A4A;
             background-color: #e1e1e1;
         }
+        @media all and (max-width: 550px){
+            body{
+                padding: 0 7%;
+            }
+            .img2, .img3{
+                display: none;
+            }
+            header h2{
+                line-height: 20px;
+            }
+        }
         a{
             color: #4A4A4A;
         }
 
 
+        /* header */
+        header{
+            margin-top: 5vh;
+            font-weight: 600;
+        }
+        h1{
+            font-size: 2rem;
+        }
         header h1 span{
             border-bottom: 1px solid black;
-            font-weight: 500;
+            font-weight: 400;
         }
         header h2{
             font-size: 0.8rem;
+            margin-top: 3vh;
         }
 
 
         /* section */
+        section h2{
+            margin-top: 5vh;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
         section>ol{
             display: inline-block;
             padding-left: 20px;
+            margin-top: 3vh;
+            list-style: decimal;
         }
         section>ol>li{
             line-height: 1.5rem;
@@ -47,6 +80,7 @@
         }
         section li li{
             list-style: upper-alpha;
+            margin-left: 3vh;
         }
         section ol li ul li ul li{
             list-style: upper-roman;
@@ -57,6 +91,9 @@
 
 
         /* footer */
+        footer{
+            margin: 5vh 0;
+        }
         h5 span{color:#28B9C3;}
 
 
@@ -82,6 +119,7 @@
             left: -1vw;
             width: 100%;
         }
+
         @media all and (max-width: 1000px){
             .bg .img1{
                 display: none;
@@ -98,7 +136,7 @@
     <section>
         <h2>목차.</h2>
         <ol>
-            <li class="wpwp">
+            <li>
                 <span>HTML</span>
                 <ul>
                     <li class="shake-slow"><a href="1.html/semantic/semantic.html" target="blank">Semantic</a></li>
@@ -112,7 +150,7 @@
                 <ul>
                     <li class="shake-slow"><a href="2.css/layout/layout.html" target="blank">Layout</a></li>
                     <li class="shake-slow"><a href="2.css/responsive/responsive.html" target="blank">Media Query</a></li>
-                    <li class="shake-slow"><a href="2.css/gridLayout/gridLayout.html" target="blank">Grid Layout(keyboard)</a></li>
+                    <li class="shake-slow"><a href="2.css/gridLayout/gridLayout.html" target="blank">GridLayout(keyboard)</a></li>
                     <li class="shake-slow"><a href="2.css/gridLayout/gridLayout2.html" target="blank">Grid Layout and Comics</a></li>
                     <li class="shake-slow"><a href="2.css/hamberger_menu/hamberger.html" target="blank">Hamberger menu</a></li>
                     <li class="shake-slow"><a href="2.css/3d/3d.html" target="blank">3D Animate</a></li>
@@ -170,5 +208,17 @@
         <img class="img2" src="images/nerisco1.png" alt="img2">
         <img class="img3" src="images/nerisco2.png" alt="img3">
     </div>
+    <script>
+        $(function(){
+            $(window).resize(function(){
+                var width = parseInt($(this).width());
+
+                if(width < 1000){
+                    $("li").removeClass("shake-slow").addClass("normal");
+                } else{
+                }
+            })
+        })
+    </script>
 </body>
 </html>
