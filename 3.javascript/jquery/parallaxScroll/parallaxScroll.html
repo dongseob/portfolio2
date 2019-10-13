@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            height: 100%;
+            justify-content: space-around;
+            position: relative;
+            width: 100%;
+        }
+        .container section {
+            width: 100%;
+            height: 100vh;
+            flex: 1;
+            display: flex;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .container section:nth-child(1) .image {
+            background-image: url(gun_goddess_miss_fortune_league_of_legends_5k-1280x720.jpg);
+        }
+        .container section:nth-child(2) .image {
+            background-image: url(god_fist_lee_sin_league_of_legends_artwork-1280x720.jpg);
+        }
+        .container section:nth-child(3) .image {
+            background-image: url(vayne_league_of_legends-1280x720.jpg);
+        }
+        .container section:nth-child(4) .image {
+            background-image: url(pulsefire_riven_league_of_legends-1280x720.jpg);
+        }
+        .container section:nth-child(5) .image {
+            background-image: url(amumu_league_of_legends-1280x720.jpg);
+        }
+        .container section:nth-child(6) .image {
+            background-image: url(championship_ashe_league_of_legends-1280x720.jpg);
+        }
+        .container section .image {
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 500;
+            opacity: 0.4;
+        }
+        .container section .stuff {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            height: 100%;
+            width: 100%;
+            max-width: 70%;
+            justify-content: center;
+            text-align: center;
+            z-index: 1000;
+            color: #C9AA71;
+            margin: 0 auto;
+            font-size: 26px;
+            position: relative;
+        }
+        .container section .stuff h2 {
+            margin: 0px;
+        }
+
+        .at-twitter {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            color: #f1c40f;
+            z-index: 5000;
+        }
+        .at-twitter:visited {
+            color: #f1c40f;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            color: inherit;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="image" data-type="background" data-speed="2"></div>
+            <div class="stuff" data-type="content"><h1>Simple Parallax scroll</h1><h2>League Of Legends</h2></div>
+        </section>
+        
+        <section>
+            <div class="image" data-type="background" data-speed="7"></div>
+            <div class="stuff" data-type="content"><h2>Lee Sin, The Blind Monk</h2><p>The god Li rebuilt the monastery while staying with monks with gratitude. After the reconstruction work was completed, Udir, the spirit sorcerer, made his way to the capital for enlightenment.</p></div>
+        </section>
+        
+        <section>
+            <div class="image" data-type="background" data-speed="6"></div>
+            <div class="stuff" data-type="content"><h2>Vayne, The Night Hunter</h2><p>Something awakened inside the vanes covered with the monster's corpse. It was joy. Vengeance and the heat of violence revolved all over the body in blood, and Vane felt pleasant.</p></div>
+        </section>
+        
+        <section>
+            <div class="image" data-type="background" data-speed="5"></div>
+            <div class="stuff" data-type="content"><h2>Riven, The Exile</h2><p>Liven, whose faith and conviction had been holding on to his life, has disappeared at one moment, now expelling himself and wandering around Ionia, where the war has been brutally scratched. seeking forgiveness from the land, the dead, and atonement from herself.</p></div>
+        </section>
+        
+        <section>
+            <div class="image" data-type="background" data-speed="3"></div>
+            <div class="stuff" data-type="content"><h2>Sivir, The Battle Mistress</h2><p>Now Sibir is at a crossroads. Will he accept the fate he has long been given, or will he make his own destiny in the ever-changing sand desert of Shrima?</p></div>
+        </section>
+        
+        <section>
+            <div class="image" data-type="background" data-speed="3"></div>
+            <div class="stuff" data-type="content"><h2>Ashe, The Frost Archer</h2><p>Now Ash has become the head of the frayod tribal alliance, the first of its kind in several generations. But the alliance Ash led was based on precarious peace. There were various factors that threatened peace. The power trick inside the alliance, the threat of foreign power, the growth of the ferocious winter claw tribe, and the very "fate" Ash must pretend to believe.</p></div>
+        </section>
+    </div>
+        
+        
+    <script src="/JQuery-3.4.0/jquery-3.4.0.js"></script>
+    <script>
+        // makes the parallax elements
+        function parallaxIt() {
+        // create variables
+        var $fwindow = $(window);
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        var $contents = [];
+        var $backgrounds = [];
+
+        // for each of content parallax element
+        $('[data-type="content"]').each(function(index, e) {
+            var $contentObj = $(this);
+
+            $contentObj.__speed = ($contentObj.data('speed') || 1);
+            $contentObj.__fgOffset = $contentObj.offset().top;
+            $contents.push($contentObj);
+        });
+
+        // for each of background parallax element
+        $('[data-type="background"]').each(function() {
+            var $backgroundObj = $(this);
+
+            $backgroundObj.__speed = ($backgroundObj.data('speed') || 1);
+            $backgroundObj.__fgOffset = $backgroundObj.offset().top;
+            $backgrounds.push($backgroundObj);
+        });
+
+        // update positions
+        $fwindow.on('scroll resize', function() {
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            $contents.forEach(function($contentObj) {
+            var yPos = $contentObj.__fgOffset - scrollTop / $contentObj.__speed;
+
+            $contentObj.css('top', yPos);
+            })
+
+            $backgrounds.forEach(function($backgroundObj) {
+            var yPos = -((scrollTop - $backgroundObj.__fgOffset) / $backgroundObj.__speed);
+
+            $backgroundObj.css({
+                backgroundPosition: '50% ' + yPos + 'px'
+            });
+            });
+        });
+
+        // triggers winodw scroll for refresh
+        $fwindow.trigger('scroll');
+        };
+
+        parallaxIt();
+    </script>
+</body>
+</html>
