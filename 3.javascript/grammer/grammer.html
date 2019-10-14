@@ -13,13 +13,14 @@
             width: 100%;
             color: #251b19;
             font-family: 'Do Hyeon', sans-serif;
+            background-color: #e1e1e1;
         }
 
         header{
             text-align: center;
         }
         header img{
-            width: 1000px;
+            width: 60%;
             position: relative;
         }
         header h1{
@@ -53,6 +54,19 @@
         }
         section h3{
             font-size: 1.1rem;
+        }
+
+        @media all and (max-width:1000px){
+            header img{
+                width: 100%;
+            }
+            header h1{
+                width: 35%;
+                top: 18%;
+            }
+            section{
+                width: 90%;
+            }
         }
     </style>
 </head>

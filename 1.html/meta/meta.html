@@ -7,7 +7,19 @@
     <title>Document</title>
     <style>
         * {font-family: '', sans-serif;}
-        body{margin: 0 15%; line-height: 30px;}
+        body{
+            margin: 0 15%; 
+            line-height: 30px;
+            background-color: #e1e1e1;
+        }
+        @media all and (max-width: 550px){
+            body{
+                margin: 2%;
+            }
+            span{
+                font-size: 12.5px;
+            }
+        }
         .text{margin-bottom: 5%;}
         .img{text-align: center;}
         .img img{width: 100%;}
@@ -92,7 +104,7 @@
 
         <div class="text">
             <h3>meta http-equiv <span style='font-size:25px;'>&#10060;</span></h3>
-            <pre><<span>meta http-equiv</span>="<span>refresh</span>" <span>content</span>="<span>0; url=</span>https://test.com/"></pre>
+            <pre><<span>meta http-equiv</span>="<span>refresh</span>" <span>content</span>="<span>0; url=</span><span>https://test.com/"></span></pre>
             <p>해당 메타 태그를 사용하면 지정한 시간 이후 이정한 URL으로 자동으로 페이지를 이동시킬 수 있다.</p>
             <p>content에 초 단위로 시간을 지정하고 0일 경우에는 즉시 이동한다.</p>
             <p>해당 동작은 권장되지 않는다. 자동으로 URL 리다이렉션은 최근 웹에서는 지양하고 있으며 피싱 등의 위험으로 간주 될 수 있다. <br>
