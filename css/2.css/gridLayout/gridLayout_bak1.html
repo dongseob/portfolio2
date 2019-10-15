@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{width : 80%;margin: 0 auto;}
+        .wrap1{
+            width: 100%;
+        }
+        .wrap h1{margin: 0 15px;}
+        .grid {
+            display: flex;
+            text-align: center;
+        }
+        .grid > .col1:hover{background-color:rgba(51, 153, 204,.6); transition: all 0.5s;}
+        .grid > .col2:hover{background-color:rgba(51, 153, 204,.6); transition: all 0.5s;}
+        .grid > .col3:hover{background-color:rgba(51, 153, 204,.6); transition: all 0.5s;}
+        .grid > .col4:hover{background-color:rgba(51, 153, 204,.6); transition: all 0.5s;}
+        .grid > .col5:hover{background-color:rgba(51, 153, 204,.6); transition: all 0.5s;}
+        .grid > .col6:hover{background-color:rgba(51, 153, 204,.6); transition: all 0.5s;}
+        .col1{width: 100%; margin: 5px;}
+        .col2{width: 50%; margin: 5px; }
+        .col3{width: 33.3333%; margin: 5px;}
+        .col4{width: 25%; margin: 5px;}
+        .col5{width: 16.6666%; margin: 5px;}
+        .col6{width: 8.3333%; margin: 5px;}
+        .grid:nth-child(1n) div {
+            background: #D6EBF5; 
+            padding: 1.5rem 0;
+            border: 1px solid #33cccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Grid</h1>
+    <section class="wrap1">
+        <div class="wrapper">
+            <div class="grid">
+                <div class="col1">
+                    1
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col2">
+                    1/2
+                </div>
+                <div class="col2">
+                    1/2
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col3">
+                    1/3
+                </div>
+                <div class="col3">
+                    1/3
+                </div>
+                <div class="col3">
+                    1/3
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col4">
+                    1/4
+                </div>
+                <div class="col4">
+                    1/4
+                </div>
+                <div class="col4">
+                    1/4
+                </div>
+                <div class="col4">
+                    1/4
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col5">
+                    1/6
+                </div>
+                <div class="col5">
+                    1/6
+                </div>
+                <div class="col5">
+                    1/6
+                </div>
+                <div class="col5">
+                    1/6
+                </div>
+                <div class="col5">
+                    1/6
+                </div>
+                <div class="col5">
+                    1/6
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+                <div class="col6">
+                    1/12
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

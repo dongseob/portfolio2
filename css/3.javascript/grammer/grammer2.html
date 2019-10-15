@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            color: #251b19;
+            font-family: 'Do Hyeon', sans-serif;
+            background-color: #e1e1e1;
+        }
+
+        header{
+            text-align: center;
+        }
+        header img{
+            width: 60%;
+            position: relative;
+        }
+        header h1{
+            border: 2px solid white;
+            position: absolute;
+            width: 20%;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -70%)
+        }
+        h1{
+            padding: 20px;
+        }
+        
+
+
+        section{
+            width: 60%;
+            margin: 0 auto;
+        }
+        section .content{
+            margin-bottom: 12%;
+        }
+        section h2{
+            font-size: 2.4rem;
+            font-weight: 500;
+        }
+        section p{
+            border-left: 3px solid #F8DC3D;
+            padding-left: 15px;
+            font-size: 1.1rem;
+        }
+        section h3{
+            font-size: 1.1rem;
+        }
+        section h4{
+            padding-left: 15px;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.7rem;
+        }
+
+        @media all and (max-width:1000px){
+            header img{
+                width: 100%;
+            }
+            header h1{
+                width: 35%;
+                top: 15%;
+                padding: 10px;
+                font-size: 1.5rem;
+            }
+            section{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://static.tech.io/servlet/fileservlet?id=15249394615945" alt="">
+        <h1>자바스크립트 기초 문법 정리 part.2</h1>
+    </header>
+    <section>
+        <div class="content">
+            <h2>내장 객체</h2>
+            <h3>브라우저의 자바스크립트 엔진에 내장된 객체. String/Date/Array/Nath/RegExp Object 등이 있음.</h3>
+        </div>
+
+        <div class="content">
+            <h2>날짜 객체 Date</h2>
+            <h3>Date 객체 생성</h3>
+            <p>
+                new Date() <br>
+                new Date(milliseconds) <br>
+                new Date(dateString) <br>
+                new Date(year, month, day, hours, minutes, seconds, milliseconds)
+            </p>
+
+            <h3>Date Get 메서드</h3>
+            <h4>
+                getDate() - 일 정보를 가져옴. <br>
+                getDay() - 요일 정보를 가져옴. 0(일요일)-6(토요일) <br>
+                getFullYear - 연도 정보를 가져옴. (yyyy) <br>
+                getHours() - 시간 정보를 가져옴. <br>
+                getMilliseconds() - 밀리초 정보를 가져옴. 0-999 (1/1000 초의 단위) <br>
+                getMinutes() - 분 정보를 가져옴. <br>
+                getMonth() - 월 정보를 가져옴. 현재 월에서 -1한 값으로 옴. <br>
+                getSeconds() - 초 정보를 가져옴. <br>
+                getTime() - 1970년 1월 1일부터 경과된 시간을 밀리초로 가져옴. <br>
+            </h4>
+
+            <h3>Date Set 메서드</h3>
+            <h4>
+                setDate() - 일 정보를 설정. <br>
+                setFullYear() - 연도 정보를 설정. 원한다면 월과 일 정보도 설정할 수 있다.      <br>     
+                setHours() - 시간 정보를 설정. <br>
+                setMillseconds() - 밀리초 정보를 설정. <br>
+                setMinutes() - 분 정보를 설정. <br>
+                setSeconds() - 초 정보를 설정. <br>
+                setTime() - 1970년 1월 1일부터 경과된 시간을 밀리초로 설정. <br>
+            </h4>
+
+            <h3>기타 Date 메서드</h3>
+            <h4>
+                now() - 1970년 1월 1일부터 지금까지의 밀리초를 반환. <br>
+                parse() - 날짜 형태의 문자열을 변환하여 1970년 1월 1일부터 입력한 날짜까지의 밀리초를 반환. <br>
+                toString() - Date 객체를 문자열로 변환. <br>
+                toJSON() - Date 객체를 JSON 데이터로 변환. <br>
+                valueOf() - Date 객체를 밀리초로 반환. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>숫자 객체 Number</h2>
+            <h3>Number 생성</h3>
+            <p>
+                var num = 1; <br>
+                var num2 = new Number(1); <br>
+            </p>
+
+            <h3>Number 객체의 속성</h3>
+            <h4>
+                MAX_VALUE - 표현 가능한 가장 큰 수. <br>
+                MIN_VALUE - 표현 가능한 가장 작은 수. <br>
+                POSITIVE_INFINITY - 무한대 수 표기. <br>
+                NEGATIVE_INFINITY - 음의 무한대 수 표기. <br>
+                NaN - 숫자가 아닌 경우 표기. <br>
+            </h4>
+
+            <h3>Number 객체 메서드</h3>
+            <h4>
+                toExponential(n) - 자수 표기법으로 소수점 n자리만큼 문자형 데이터로 반환. <br>
+                toFixed(n) - 소수점 n자리만큼 반올림하여 문자형 데이터로 반환. <br>
+                toPrecision(n) - 유효 숫자 n의 개수만큼 반올림하여 문자형 데이터로 반환. <br>
+                toString() - 숫자형 데이터를 문자형 데이터로 반환. <br>
+                valueOf() - 객체의 원래 값을 반환. <br>
+                parseInt(값) - 데이터를 정수로 변환하여 반환. <br>
+                parseFloat(값) - 데이터를 실수로 변환하여 반환. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>수학 객체 Math</h2>
+            <h3>Math 메서드 및 상수</h3>
+            <h4>
+                Math.abs(숫자) - 숫자의 절댓값을 반환. <br>
+                Math.max(숫자1, 숫자2, 숫자3) - 숫자 중 최댓값을 반환. <br>
+                Math.min(숫자1, 숫자2, 숫자3) - 숫자 중 최솟값을 반환. <br>
+                Math.pow(숫자, 제곱값) - 숫자의 거듭제곱한 값을 반환. <br>
+                Math.random() - 0~1 사이의 난수를 반환. <br>
+                Math.round(숫자) - 소수점 첫째 자리에서 반올림하여 정수를 반환. <br>
+                Math.ceil(숫자) - 소수점 첫째 자리에서 무조건 올림에서 정수를 반환. <br>
+                Math.floor(숫자) - 소수점 첫째 자리에서 무조건 내림해서 정수를 반환. <br>
+                Math.sqrt(숫자) - 숫자의 제곱근 값을 반환. <br>
+                Math.PI - 원주율 상수를 반환. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>배열 객체 Array</h2>
+            <h3>Array 생성</h3>
+            <p>
+                var array = new Array(); <br>
+                array[0] = 1; <br>
+                array[1] = 2; <br> <br>
+                
+                var array2 = new Array(1, "temp", true); <br> <br>
+                
+                var array3 = [1, true, "문자열도 가능"]; <br>
+            </p>
+
+            <h3>Array 객체의 메서드 및 속성</h3>
+            <h4>
+                join(연결문자) - 배열 객체에 데이터를 연결 문자 기준으로 1개의 문자형 데이터로 반환. <br>
+                reverse() - 배열 객체에 데이터의 순서를 거꾸로 바꾼 후 반환. <br>
+                sort() - 배열 객체에 데이터를 오름차순으로 정렬. <br>
+                slice(index1, index2) - 배열 객체에 데이터 중 원하는 인덱스 구간만큼 잘라서 배열 객체로 가져옴. <br>
+                splice() - 배열 객체에 지정 데이터를 삭제하고 그 구간에 새 데이터를 삽입할 수 있음. <br>
+                concat() - 2개의 배열 객체를 하나로 결합. <br>
+                pop() - 배열에 저장된 데이터 중 마지막 인덱스에 저장된 데이터 삭제. <br>
+                push(new data) - 배열 객체에 마지막 인덱스에 새 데이터를 삽입. <br>
+                shift() - 배열 객체에 저장된 데이터 중 첫 번째 인덱스에 저장된 데이터를 삭제. <br>
+                unshift(new data) - 배열 객체의 가장 앞의 인덱스에 새 데이터를 삽입. <br>
+                length - 배열에 저장된 총 데이터의 개수를 반환. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>문자 객체 String</h2>
+            <h3>String 생성</h3>
+            <p>
+                var str = "hello"; <br>
+                var str2 = new String("hi"); <br>
+            </p>
+
+            <h2>String 객체 메서드 및 속성</h2>
+            <h4>
+                charAt(index) - 문자열에서 인덱스 번호에 해당하는 문자 반환. <br>
+                indexOf("찾을 문자") - 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 최초로 일치하는 문자의 인덱스 번호를 반환. 찾는 문자가 없으면 -1 반환. <br>
+                lastIndexOf("찾을 문자") - indexOf와 동일하나 문자열의 오른쪽부터 찾음. <br>
+                match("찾을 문자") - indexOf와 동일하나 찾는 문자가 없으면 null을 반환. <br>
+                replace("바꿀 문자", "새 문자") - 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 최초로 찾은 문자를 새 문자로 치환. <br>
+                search("찾을 문자") - 문자열 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 최초로 일치하는 인덱스 번호를 반환. <br>
+                slice(a, b) - a개의 문자를 자르고 b번째 이후에 문자를 자른 후 남은 문자를 반환. <br>
+                substring(a, b) - a 인덱스부터 b 인덱스 이전 구간의 문자를 반환. <br>
+                substr(a, 문자 개수) - 문자열에 a 인덱스부터 지정한 문자 개수만큼 문자열을 반환. <br>
+                split("문자") - 지정한 문자를 기준으로 문자 데이터를 나누어 배열에 저장하여 반환. <br>
+                toLowerCase() - 문자열에서 영문 대문자를 모두 소문자로 바꿈. <br>
+                toUpperCase() - 문자열에서 영문 소문자를 모두 대문자로 바꿈. <br>
+                length - 문자열에서 문자의 개수를 반환. <br>
+                concat("새로운 문자") - 문자열에 새로운 문자열을 결합. <br>
+                charCodeAt("찾을 문자") - 찾을 문자의 아스키 코드 값을 반환. <br>
+                fromCharCode(아스키 코드 값) - 아스키 코드 값에 해당하는 문자를 반환. <br>
+                trim() - 문자의 앞 또는 뒤에 공백 문자열을 삭제. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>브라우저 객체 모델(BOM)</h2>
+            <h4>브라우저에 내장된 객체. </h4>
+        </div>
+
+        <div class="content">
+            <h2>window 객체</h2>
+            <h4>브라우저 객체의 최상위 객체. </h4> <br>
+
+            <h3>window 객체 메서드</h3>
+            <h4>
+                open("url 경로", "창 이름", "옵션 설정") - 새 창을 열 때 사용. <br>
+                - open() 메서드 옵션 설정: width/height/left/top/location/status <br>
+                alert("메세지") - 경고 창을 띄움. <br>
+                prompt("질의 내용", "기본 답변") - 질의응답 창을 띄움. <br>
+                confirm("질의 내용") - 확인/취소 창을 띄움. <br>
+                - 확인 클릭시 true 반환, 취소 클릭시 false 반환. <br>
+                moveTo(x 위치값, y 위치값) - 창의 위치를 이동시킬 때 사용. <br>
+                resizeTo(너빗값, 높잇값) - 창의 크기를 변경시킬 때 사용. <br>
+                setInterval("스크립트 실행문", 시간 간격) - 일정 간격으로 반복하여 실행문을 실행시킬 때 사용. <br>
+                clearIntervar(참조 변수) - 참조 변수에 참조되어 있는 setInterval() 삭제. <br>
+                setTimeout("스크립트 실행문", 시간 간격) - 일정 간격으로 한 번만 실행문을 실행시킬 때 사용. <br>
+                clearTimeout(참조 변수) - 참조 변수에 참조되어 있던 setTimeout() 삭제. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>screen 객체</h2>
+            <h4>사용자의 모니터 정보를 제공하는 객체.</h4> <br>
+
+            <h3>screen 객체 속성</h3>
+            <h4>width/height/availWidth/availHeight(사용자 모니터가 표현 가능한 컬러 bit)</h4>
+        </div>
+
+        <div class="content">
+            <h2>location 객체</h2>
+            <h4>사용자 브라우저의 주소 창에 url에 대한 정보와 새로 고침 기능을 제공하는 객체.</h4>
+
+            <h3>location 객체 속성 및 메서드</h3>
+            <h4>
+                href - 주소 영역에 참조 주소를 설정하거나 URL 반환. <br>
+                hash - URL의 해시값을 반환. <br>
+                hostname - URL의 호스트 이름을 설정하거나 반환. <br>
+                host - URL의 호스트 이름과 포트 번호를 반환. <br>
+                port - URL의 포트 번호를 반환. <br>
+                protocol - URL의 프로토콜을 반환. <br>
+                search - URL의 쿼리를 반환. <br>
+                reload() - 새로 고침. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>history 객체</h2>
+            <h4>사용자가 방문한 사이트 중 이전에 방문한 사이트와 다음 방문한 사이트로 다시 돌아갈 수 있는 속성과 메서드를 제공하는 객체.</h4> <br>
+
+            <h3>history 메서드 및 속성</h3>
+            <h4>
+                back() - 이전 방문한 페이지로 이동. <br>
+                forward() - 다음 방문한 페이지로 이동. <br>
+                go(이동 숫자) - 이동 숫자만큼의 페이지로 이동. 음의 값이면 이전 페이지로 이동. <br>
+                length - 방문 기록에 저장된 목록의 개수 반환. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>navigator 객체</h2>
+            <h4>현재 방문자가 사용하는 브라우저 정보와 운영체제의 정보를 제공하는 객체.</h4><br>
+
+            <h3>navigator 속성</h3>
+            <h4>
+                appCodeName - 방문자의 브라우저 코드명을 반환. <br>
+                appName - 방문자의 브라우저 이름 반환. <br>
+                appVersion - 방문자의 브라우저 버전 정보를 반환. <br>
+                language - 방문자의 브라우저 사용 언어를 반환. <br>
+                product - 방문자의 브라우저 사용 엔진 이름을 반환. <br>
+                platform - 방문자의 브라우저를 실행하는 운영체제를 반환. <br>
+                userAgent - 방문자의 브라우저와 운영체제의 종합 정보를 제공. <br>
+            </h4>
+        </div>
+
+        <div class="content">
+            <h2>문자 객체 모델(DOM)</h2>
+            <h4>HTML 문서의 구조.</h4> <br>
+        </div>
+
+        <div class="content">
+            <h2>선택자</h2>
+            <h3>직접 선택자</h3> 
+            <h4>
+                직접 문서에서 요소를 선택함. (id/class/폼 명/요소 명 등) <br>
+                document.getElementById("아이디 명") - 아이디를 이용해 요소를 선택. <br>
+                document.getElmentsByTagName("요소 명") - 요소의 이름을 이용해 요소를 선택. <br>
+                document.formName.inputName - 폼 요소에 name 속성을 이용해 요소를 선택. <br>
+            </h4> <br>
+
+            <h3>인접 관계 선택자</h3>
+            <h4>
+                직접 선택자를 사용해 선택해 온 문서 객체를 기준으로 가까이에 있는 요소를 선택함. (parentNode/childeNodes 등) <br>
+                parentNode - 선택한 요소의 부모 요소를 선택. <br>
+                childNodes - 선택한 요소의 모든 자식 요소를 선택. 선택한 모든 요소가 저장됨. <br>
+                firstChild - 선택한 요소의 첫 번째 자식 요소만 선택. <br>
+                previousSibling - 선택한 요소의 이전에 오는 형제 요소만 선택. <br>
+                nextSibling - 선택한 요소의 다음에 오는 형제 요소만 선택. <br>
+            </h4> <br>
+
+            <h3>문서 객체 이벤트 핸들러 적용하기</h3>
+            <h4>
+                onclick - 선택한 요소를 클릭했을 때 이벤트 발생. <br>
+                onmousevoer - 선택한 요소에 마우스를 올렸을 때 이벤트 발생. <br>
+                onmouseout - 선택한 요소에 마우스가 벗어났을 때 이벤트 발생. <br>
+                submit - 선택한 폼에 전송이 일어났을 떄 이벤트 발생. <br>
+            </h4>
+            <p>
+                버튼 <br>
+                document.getElementById("btn").onclick = function() { <br>
+                    &emsp;alert("welcome"); <br>
+                }
+            </p>
+        </div>
+
+        <div class="content">
+            <p>
+                참고문헌: <br>
+                Do it! 자바스크립트+제이쿼리 입문 <br>
+                JavaScript 튜토리얼 문서 <a href="https://www.w3schools.com/js/default.asp">(http://www.w3schools.com/js/default.asp)</a>
+            </p>
+        </div>
+    </section>
+</body>
+</html>

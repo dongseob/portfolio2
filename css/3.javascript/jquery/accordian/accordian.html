@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            min-height: 100%;
+            font-family: 'Nunito', sans-serif;
+        }
+        body {
+            background: linear-gradient(to bottom right, #3D4258, #6670A0, #9688B4);
+            line-height: 1.5;
+        }
+        h1 {
+            font-weight: 200;
+            font-size: 3rem;
+            color: white;
+            text-align: center;
+        }
+        .accordion {
+            background: linear-gradient(to bottom right, white, #F8F8F8);
+            max-width: 400px;
+            background: white;
+            margin: 0 auto;
+            box-shadow: 0 15px 20px -15px rgba(0,0,0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-header {
+            border-bottom: 1px solid #DDE0E7;
+            color: #2a313a;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 1.5rem;
+        }
+        .accordion-header: hover {
+            background: F6F7F9;
+        }
+        .accordion-content {
+            display: none;
+            border-bottom: 1px solid #DDE0EF;
+            background: #F6F7F9;
+            padding: 1.5rem;
+            color: #4a5666;
+        }
+        .accordion-header::before {
+            content: '';
+            vertical-align: middle;
+            display: inline-block;
+            width: .75rem;
+            height: .75rem;
+            border-radius: 50%;
+            background-color: #B1B5BE;
+            margin-right: .75em;
+        }
+        .active.accordion::before {
+            background-color: #FC6468;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accordion <span style="font-size: 1rem;">QnA</span></h1>
+
+    <div class="accordion">
+    <div class="accordion-header">The most memorable game?</div>
+    <div class="accordion-content">to the moon. It's a game that makes me think. Especially, background music made me nervous. It was the best luck of my life.</div>
+    
+    <div class="accordion-header">Why the front end?</div>
+    <div class="accordion-content">Why do you like it? I like decorating very much. It's just that. The Web has been growing up with me since I was a child.</div>
+
+    <div class="accordion-header">Why do you write in English?</div>
+    <div class="accordion-content">It's simple, because it looks like something. There's nothing to be afraid of because there's a great friend, papago.</div>
+
+
+    <script src="../../JQuery-3.4.0/jquery-3.4.0.js"></script>
+    <script>
+        $(".accordion").on("click", ".accordion-header", function() {
+            $(this).toggleClass("active").next().slideToggle();
+        });
+    </script>
+</body>
+</html>

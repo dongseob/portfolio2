@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="DongSeob - portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ogimage.png">
+    <meta property="og:description" content="Front-End and Publishing portfolio">
+    <title>DongSeob - portfolio</title>
+
+    <!-- erik meyer's "reset css" -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/csshake-little.css">
+    <script src="3.javascript/JQuery-3.4.0/jquery-3.4.0.js"></script>
+
+    <style>
+        /* all */
+        body{
+            margin: 0;
+            text-align: left;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 0.9rem;
+            padding: 0 20%;
+            color: #4A4A4A;
+            background-color: #e1e1e1;
+        }
+        @media all and (max-width: 550px){
+            body{
+                padding: 0 7%;
+            }
+            .img2, .img3{
+                display: none;
+            }
+            header h2{
+                line-height: 20px;
+            }
+        }
+        a{
+            color: #4A4A4A;
+        }
+
+
+        /* header */
+        header{
+            margin-top: 5vh;
+            font-weight: 600;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        header h1 span{
+            border-bottom: 1px solid black;
+            font-weight: 400;
+        }
+        header h2{
+            font-size: 0.8rem;
+            margin-top: 3vh;
+        }
+
+
+        /* section */
+        section h2{
+            margin-top: 5vh;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        section>ol{
+            display: inline-block;
+            padding-left: 20px;
+            margin-top: 3vh;
+            list-style: decimal;
+        }
+        section>ol>li{
+            line-height: 1.5rem;
+            margin-bottom: 30px;
+        }
+        section li li{
+            list-style: upper-alpha;
+            margin-left: 3vh;
+        }
+        section ol li ul li ul li{
+            list-style: upper-roman;
+        }
+        ol span{
+            font-weight: 600;
+        }
+
+
+        /* footer */
+        footer{
+            margin: 5vh 0;
+        }
+        h5 span{color:#28B9C3;}
+
+
+        .bg{
+            position: fixed;
+            z-index: -10;
+        }
+        .bg .img1{
+            right: 5vw;
+            bottom: 10vh;
+            position: fixed;
+            width: 35%;
+        }
+        .bg .img2{
+            position: fixed;
+            bottom: 0;
+            left: 1vw;
+            width:100%;
+        }
+        .bg .img3{
+            position: fixed;
+            bottom: -2vh;
+            left: -1vw;
+            width: 100%;
+        }
+
+        @media all and (max-width: 1000px){
+            .bg .img1{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>JDS</span> second_p</h1>
+        <h2>slogan: 똑같은 CSS를 하더라도 나만의 것을 만들자 by동섭</h2>
+    </header>
+
+    <section>
+        <h2>목차.</h2>
+        <ol>
+            <li>
+                <span>HTML</span>
+                <ul>
+                    <li class="shake-little"><a href="1.html/semantic/semantic.html" target="blank">Semantic</a></li>
+                    <li class="shake-little"><a href="1.html/meta/meta.html" target="blank">Meta Tag</a></li>
+                </ul>
+            </li>
+            
+
+            <li>
+                <span>CSS</span>
+                <ul>
+                    <li class="shake-little"><a href="2.css/layout/layout.html" target="blankG">Layout</a></li>
+                    <li class="shake-little"><a href="2.css/responsive/responsive.html" target="blank">Media Query</a></li>
+                    <li class="shake-sllittleow"><a href="2.css/gridLayout/gridLayout.html" target="blank">GridLayout(keyboard)</a></li>
+                    <li class="shake-little"><a href="2.css/gridLayout/gridLayout2.html" target="blank">Grid Layout and Comics</a></li>
+                    <li class="shake-little"><a href="2.css/hamberger_menu/hamberger.html" target="blank">Hamberger menu</a></li>
+                    <li class="shake-slittlelow"><a href="2.css/3d/3d.html" target="blank">3D Animate</a></li>
+                    <li>
+                        SASS
+                        <ul>
+                            <li class="shake-little"><a href="2.css/sass/mixin/mixin.html" target="blank">@mixin</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li>
+                <span>Javascript</span>
+                <ul>
+                    <li class="shake-little"><a href="3.javascript/grammer/grammer.html" target="blank">Javascript Grammar part.1</a></li>
+                    <li class="shake-little"><a href="3.javascript/grammer/grammer2.html" target="blank">Javascript Grammar part.2</a></li>
+                    <li class="shake-little"><a href="3.javascript/dom/dom.html" target="blank">Javascript DOM을 활용한 item list</a></li>
+                    <li>
+                        JQuery
+                        <ul>
+                            <li class="shake-little"><a href="3.javascript/jquery/accordian/accordian.html" target="blank">Accordian</a></li>
+                            <li class="shake-slolittlew"><a href="3.javascript/jquery/parallaxScroll/parallaxScroll.html" target="blank">Parallax Scroll with LOL</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li>
+                <span>Imitation Page</span>
+                <ul>
+                    <li class="shake-little"><a href="#" target="blank">예정..</a></li>
+                    <li class="shake-little"><a href="#" target="blank">예정..Jackson(+vue.js)</a></li>
+                </ul>
+            </li>
+
+
+            <li>
+                <span>Design</span>
+                <ul>
+                    <li class="shake-slow"><a href="design/graphic_design.html" target="blank">감성사진관(포토샵+일러스트)</a></li>
+                    <li class="shake-slow"><a href="design/graphic_design2.html" target="blank">motimo 가죽지갑(촬영+포토샵+모델본인^.^)</a></li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <footer>
+        <!-- <hr> -->
+        <h5>copylight© <span>dongseob jeong</span> , 2019</h3>
+    </footer>
+
+    <div class="bg">
+        <img class="img1" src="images/nerisco.png" alt="img1">
+        <img class="img2" src="images/nerisco1.png" alt="img2">
+        <img class="img3" src="images/nerisco2.png" alt="img3">
+    </div>
+
+    
+    <!-- <script>
+        $(function(){
+            $(window).size(function(){
+                var width = parseInt($(this).width());
+
+                if(width < 1000){
+                    $("li").removeClass("shake-slow").addClass("normal");
+                } else{
+                }
+            })
+        })
+        
+    </script> -->
+</body>
+</html>

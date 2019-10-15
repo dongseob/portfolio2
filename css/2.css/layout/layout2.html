@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        *{font-family: 'Noto Serif', serif;}
+        .header, .content, .sidebar, .footer{border: 1px solid #000; margin: 20px; padding: 20px;}
+        .all{width: 60%; margin: 0 auto; padding: 10px; border: 1px solid #bcbcbc; background-color: #FFE08C;}
+        .header{
+            margin-bottom: 0;
+            }
+        .content{
+            width: 50%;
+            float: left;
+            margin-right: -10px;
+        }
+        .sidebar{
+            width: 34%;
+            float: right;
+        }
+        .footer{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header"><h1>2-A Column Layout</h1></div>
+        <div class="content">
+            <h2>Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem saepe aspernatur adipisci modi deleniti veritatis ipsa quam assumenda expedita? Beatae eos repellendus qui labore eius at nesciunt asperiores ratione!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem saepe aspernatur adipisci modi deleniti veritatis ipsa quam assumenda expedita? Beatae eos repellendus qui labore eius at nesciunt asperiores ratione!</p>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Lorem</li>
+                <li>Ipsum</li>
+                <li>Dolor</li>
+            </ul>
+        </div>
+        <div class="footer"><p>Copylight</p></div>
+    </div>
+</body>
+</html>
