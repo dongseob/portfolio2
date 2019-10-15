@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <style>
         * {font-family: '', sans-serif;}
         body{
@@ -14,15 +16,18 @@
         }
         @media all and (max-width: 550px){
             body{
-                margin: 2%;
-            }
-            span{
-                font-size: 12.5px;
+                margin: 4%;
             }
         }
         .text{margin-bottom: 5%;}
         .img{text-align: center;}
-        .img img{width: 100%;}
+        .img img{
+            width: 100%;
+            margin: 0;
+        }
+        p, h3{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
         code{
             background: #2d2d2d;
             font-family: Consolas;
@@ -34,7 +39,7 @@
         }
         pre{
             background: #2d2d2d;
-            font-size: 1rem;
+            font-size: 0.8rem;
             color: #ccc;
             font-family: Consolas;
             padding: 1em;
@@ -64,7 +69,7 @@
         <div class="text">
             <h3>meta viewport <span style='font-size:25px;'>&#10004;</span></h3>
             <p>반응형 웹 구현을 위해 필요한 메타 태그이다.</p>
-            <pre><<span>meta name</span>="<span>viewport</span>" <span>content</span>="<span>width=device-width, initial-scale=1</span>"></pre>
+            <pre><<span>meta name</span>="<span>viewport</span>" <span>content</span>="<span> width=device-width, initial-scale=1</span>"></pre>
             <p>뷰포트라 함은 화면에 보이는 영역을 뜻한다. 즉 스크롤해서 봐야하는 영역을 제외한 보이는 그대로의 크기만큼의 영역이다.</p>
             <p>위 예제 코드는 가장 흔히 쓰이는 코드로 너비는 보고있는 기기의 넓이이며 그에 맞춰 초기 화면 배율을 1로 지정한다는 의미이다.</p>
         </div>
@@ -117,7 +122,7 @@
                 <pre><<span>meta property</span>="<span>og:type</span>" <span>content</span>="<span>website</span>"></pre>
                 <pre><<span>meta property</span>="<span>og:title</span>" <span>content</span>="<span>페이지 제목</span>"></pre>
                 <pre><<span>meta property</span>="<span>og:description</span>" <span>content</span>="<span>페이지 설명</span>"></pre>
-                <pre><<span>meta property</span>="<span>og:image</span>" <span>content</span>="<span>http://www.naver.com/myNews.jpg</span>"></pre>
+                <pre><<span>meta property</span>="<span>og:image</span>" <span>content</span>="<span>http://www.daum.net/1.jpg</span>"></pre>
                 <pre><<span>meta property</span>="<span>og:url</span>" <span>content</span>="<span>http://www.google.com</span>"></pre>
             </div>
             <p>오픈그래프는 웹페이지가 소셜 미디어 또는 오픈그래프를 활용한 사이트로 공유될때 사용되어지는 정보이다.</p>
