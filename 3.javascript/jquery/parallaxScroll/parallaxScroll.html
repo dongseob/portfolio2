@@ -56,6 +56,7 @@
         }
         .container section .image {
             background-attachment: fixed;
+            background-size: cover;
             width: 100%;
             height: 100%;
             position: absolute;
@@ -114,7 +115,7 @@
     <div class="container">
         <section>
             <div class="image" data-type="background" data-speed="2"></div>
-            <div class="stuff" data-type="content"><h1>Simple Parallax scroll3</h1></div>
+            <div class="stuff" data-type="content"><h1>Simple Parallax scroll</h1></div>
         </section>
         
         <section>
@@ -146,16 +147,13 @@
         
     <script src="/JQuery-3.4.0/jquery-3.4.0.js"></script>
     <script>
-        // makes the parallax elements
         function parallaxIt() {
-        // create variables
         var $fwindow = $(window);
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         var $contents = [];
         var $backgrounds = [];
 
-        // for each of content parallax element
         $('[data-type="content"]').each(function(index, e) {
             var $contentObj = $(this);
 
@@ -164,7 +162,6 @@
             $contents.push($contentObj);
         });
 
-        // for each of background parallax element
         $('[data-type="background"]').each(function() {
             var $backgroundObj = $(this);
 
@@ -173,7 +170,6 @@
             $backgrounds.push($backgroundObj);
         });
 
-        // update positions
         $fwindow.on('scroll resize', function() {
             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -192,7 +188,6 @@
             });
         });
 
-        // triggers winodw scroll for refresh
         $fwindow.trigger('scroll');
         };
 
