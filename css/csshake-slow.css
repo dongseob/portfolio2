@@ -127,3 +127,8 @@
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite; }
+  @media all and (max-width: 1000){
+    .shake-slow{
+      display: none;
+    }
+  }
