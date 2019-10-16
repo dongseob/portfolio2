@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+                background: #1c1c1c;
+                color: #fff; 
+            }
+
+        p {
+            margin: 0 auto; 
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        .text {
+            margin: 0 auto;
+            font-size: 86px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center; 
+        }
+        .text .line {
+            overflow: hidden;
+            white-space: nowrap;
+            height: 75px;
+            line-height: .9; 
+        }
+        .text .line:first-child + .line {
+            margin-left: 75px; 
+        }
+        .text .line:first-child + .line + .line {
+            margin-left: 150px; 
+        }
+        .text .line > p {
+            height: 100%;
+            overflow: hidden;
+            line-height: .7;
+            white-space: nowrap;
+            animation: moveWords 6s infinite ease; 
+        }
+        .text .line:nth-child(odd) {
+            transform: skew(60deg, -30deg) scaleY(0.66667); 
+        }
+        .text .line:nth-child(even) {
+            transform: skew(0deg, -30deg) scaleY(1.33333); 
+        }
+
+        @keyframes moveWords {
+            0% {
+                transform: translateY(0%); 
+            }
+            50% {
+                transform: translateY(-100%); 
+            }
+            100% {
+                transform: translateY(0%); 
+            } 
+        }
+        @media all and (max-width: 550px){
+            p{
+                font-size: 3rem;
+            }
+            .wrapper{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="text">
+            <div class="line">
+                <p>HTML</p>
+                <p>CSS</p>
+                <!-- <p>Canvas</p>  -->
+            </div>
+            <div class="line">
+                <p>CSS</p>
+                <p>Canvas</p>
+                <!-- <p>HTML</p> -->
+            </div>
+            <div class="line">
+                <p>Canvas</p>
+                <p>HTML</p>
+                <!-- <p>SASS</p> -->
+            </div>
+        </h1>
+    </div>
+</body>
+</html>
