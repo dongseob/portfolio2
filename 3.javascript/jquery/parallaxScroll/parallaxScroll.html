@@ -126,89 +126,102 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+
     </style>
 </head>
 <body>
-    <div class="container">
+    <!--
+ Author: Hendry Sadrak
+-->
+
+<div class="container">
         <section>
-            <div class="image" data-type="background" data-speed="2"></div>
-            <div class="stuff" data-type="content"><h1>Simple Parallax scroll</h1></div>
+          <div class="image" data-type="background" data-speed="2"></div>
+          <div class="stuff" data-type="content"><h1>Simple Parallax scroll</h1><h2>Reoptimized</h2></div>
         </section>
-        
+      
         <section>
-            <div class="image" data-type="background" data-speed="7"></div>
-            <div class="stuff" data-type="content"><h2>Lee Sin, The Blind Monk</h2><p>The god Li rebuilt the monastery while staying with monks with gratitude. After the reconstruction work was completed, Udir, the spirit sorcerer, made his way to the capital for enlightenment.</p></div>
+          <div class="image" data-type="background" data-speed="7"></div>
+          <div class="stuff" data-type="content"><h2>Made to be fast</h2><p>Lorem Deserunt maiores minima ipsa. Adipisci, corrupti, voluptatibus! Similique quidem necessitatibus provident.</p></div>
         </section>
-        
+      
         <section>
-            <div class="image" data-type="background" data-speed="6"></div>
-            <div class="stuff" data-type="content"><h2>Vayne, The Night Hunter</h2><p>Something awakened inside the vanes covered with the monster's corpse. It was joy. Vengeance and the heat of violence revolved all over the body in blood, and Vane felt pleasant.</p></div>
+          <div class="image" data-type="background" data-speed="6"></div>
+          <div class="stuff" data-type="content">Accusamus at ex amet perferendis atque fuga, ad earum, ipsa perspiciatis, dolore neque, accusantium consectetur quis voluptatibus culpa architecto animi natus facere expedita sed. Voluptatem odit explicabo amet neque aut.</div>
         </section>
-        
+      
         <section>
-            <div class="image" data-type="background" data-speed="5"></div>
-            <div class="stuff" data-type="content"><h2>Riven, The Exile</h2><p>Liven, whose faith and conviction had been holding on to his life, has disappeared at one moment, now expelling himself and wandering around Ionia, where the war has been brutally scratched. seeking forgiveness from the land, the dead, and atonement from herself.</p></div>
+          <div class="image" data-type="background" data-speed="5"></div>
+          <div class="stuff" data-type="content">Accusamus at ex amet perferendis atque fuga, ad earum, ipsa perspiciatis, dolore neque, accusantium consectetur quis voluptatibus culpa architecto animi natus facere expedita sed. Voluptatem odit explicabo amet neque aut.</div>
         </section>
-        
+      
         <section>
-            <div class="image" data-type="background" data-speed="3"></div>
-            <div class="stuff" data-type="content"><h2>Sivir, The Battle Mistress</h2><p>Now Sibir is at a crossroads. Will he accept the fate he has long been given, or will he make his own destiny in the ever-changing sand desert of Shrima?</p></div>
+          <div class="image" data-type="background" data-speed="3"></div>
+          <div class="stuff" data-type="content">Accusamus at ex amet perferendis atque fuga, ad earum, ipsa perspiciatis, dolore neque, accusantium consectetur quis voluptatibus culpa architecto animi natus facere expedita sed. Voluptatem odit explicabo amet neque aut.</div>
         </section>
-        
+      
         <section>
-            <div class="image" data-type="background" data-speed="3"></div>
-            <div class="stuff" data-type="content"><h2>Ashe, The Frost Archer</h2><p>Now Ash has become the head of the frayod tribal alliance, the first of its kind in several generations. But the alliance Ash led was based on precarious peace. There were various factors that threatened peace. The power trick inside the alliance, the threat of foreign power, the growth of the ferocious winter claw tribe, and the very "fate" Ash must pretend to believe.</p></div>
+          <div class="image" data-type="background" data-speed="3"></div>
+          <div class="stuff" data-type="content">Accusamus at ex amet perferendis atque fuga, ad earum, ipsa perspiciatis, dolore neque, accusantium consectetur quis voluptatibus culpa architecto animi natus facere expedita sed. Voluptatem odit explicabo amet neque aut.</div>
         </section>
-    </div>
+      </div>
+      
+      <div class="at-twitter"><a href="//twitter.com/hendrysadrak" target="_blank">@hendrysadrak</a></div>
         
         
     <script src="/JQuery-3.4.0/jquery-3.4.0.js"></script>
     <script>
-        function parallaxIt() {
-        var $fwindow = $(window);
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // makes the parallax elements
+function parallaxIt() {
+  // create variables
+  var $fwindow = $(window);
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        var $contents = [];
-        var $backgrounds = [];
+  var $contents = [];
+  var $backgrounds = [];
 
-        $('[data-type="content"]').each(function(index, e) {
-            var $contentObj = $(this);
+  // for each of content parallax element
+  $('[data-type="content"]').each(function(index, e) {
+    var $contentObj = $(this);
 
-            $contentObj.__speed = ($contentObj.data('speed') || 1);
-            $contentObj.__fgOffset = $contentObj.offset().top;
-            $contents.push($contentObj);
-        });
+    $contentObj.__speed = ($contentObj.data('speed') || 1);
+    $contentObj.__fgOffset = $contentObj.offset().top;
+    $contents.push($contentObj);
+  });
 
-        $('[data-type="background"]').each(function() {
-            var $backgroundObj = $(this);
+  // for each of background parallax element
+  $('[data-type="background"]').each(function() {
+    var $backgroundObj = $(this);
 
-            $backgroundObj.__speed = ($backgroundObj.data('speed') || 1);
-            $backgroundObj.__fgOffset = $backgroundObj.offset().top;
-            $backgrounds.push($backgroundObj);
-        });
+    $backgroundObj.__speed = ($backgroundObj.data('speed') || 1);
+    $backgroundObj.__fgOffset = $backgroundObj.offset().top;
+    $backgrounds.push($backgroundObj);
+  });
 
-        $fwindow.on('scroll resize', function() {
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // update positions
+  $fwindow.on('scroll resize', function() {
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            $contents.forEach(function($contentObj) {
-            var yPos = $contentObj.__fgOffset - scrollTop / $contentObj.__speed;
+    $contents.forEach(function($contentObj) {
+      var yPos = $contentObj.__fgOffset - scrollTop / $contentObj.__speed;
 
-            $contentObj.css('top', yPos);
-            })
+      $contentObj.css('top', yPos);
+    })
 
-            $backgrounds.forEach(function($backgroundObj) {
-            var yPos = -((scrollTop - $backgroundObj.__fgOffset) / $backgroundObj.__speed);
+    $backgrounds.forEach(function($backgroundObj) {
+      var yPos = -((scrollTop - $backgroundObj.__fgOffset) / $backgroundObj.__speed);
 
-            $backgroundObj.css({
-                backgroundPosition: '50% ' + yPos + 'px'
-            });
-            });
-        });
+      $backgroundObj.css({
+        backgroundPosition: '50% ' + yPos + 'px'
+      });
+    });
+  });
 
-        $fwindow.trigger('scroll');
-        };
+  // triggers winodw scroll for refresh
+  $fwindow.trigger('scroll');
+};
 
-        parallaxIt();
+parallaxIt();
     </script>
 </body>
 </html>
