@@ -12,10 +12,15 @@
 
     <!-- erik meyer's "reset css" -->
     <link href="css/reset.css" rel="stylesheet">
+
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/csshake-little.css">
     <script src="3.javascript/JQuery-3.4.0/jquery-3.4.0.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <style>
         /* all */
@@ -76,6 +81,9 @@
         }
         ol span{
             font-weight: 600;
+        }
+        #designSection{
+            cursor: pointer;
         }
 
 
@@ -192,9 +200,52 @@
 
             <li>
                 <span>Design</span>
-                <ul>
-                    <li class="shake-slow"><a href="design/graphic_design.html" target="blank">감성사진관(포토샵+일러스트)</a></li>
-                    <li class="shake-slow"><a href="design/graphic_design2.html" target="blank">motimo 가죽지갑(촬영+포토샵+모델본인^.^)</a></li>
+                <ul id="designSection">
+                    <li>
+                        <a data-toggle="modal" data-target="#myModal">감성사진관(포토샵+일러스트)</a>
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">감성사진관</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="design/studio.jpg" alt="" style="width: 100%;">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#myModal2">motimo 가죽지갑(촬영+포토샵+모델본인^.^)</a>
+                        <div id="myModal2" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">motimo 가죽지갑</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="design/motimo/motimo.jpg" alt="" style="width: 100%;">
+                                    <img src="design/motimo/motimo1.jpg" alt="" style="width: 100%;">
+                                    <img src="design/motimo/motimo3.jpg" alt="" style="width: 100%;">
+                                    <img src="design/motimo/motimo4.jpg" alt="" style="width: 100%;">
+                                    <img src="design/motimo/motimo5.jpg" alt="" style="width: 100%;">
+                                    <img src="design/motimo/motimo6.jpg" alt="" style="width: 100%;">
+                                    <img src="design/motimo/motimo7.jpg" alt="" style="width: 100%;">
+                                    <img src="design/motimo/motimo8.jpg" alt="" style="width: 100%;">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </li>
         </ol>
@@ -212,18 +263,5 @@
     </div>
 
     
-    <!-- <script>
-        $(function(){
-            $(window).size(function(){
-                var width = parseInt($(this).width());
-
-                if(width < 1000){
-                    $("li").removeClass("shake-slow").addClass("normal");
-                } else{
-                }
-            })
-        })
-        
-    </script> -->
 </body>
 </html>
